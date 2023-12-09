@@ -1,0 +1,78 @@
+{
+  "name": "BA's Inspiration",
+  "version": "1.0.0",
+  "styleFileList": [],
+  "scriptFileList": [],
+  "tweeFileList": [
+    "game/base-system/overworld-town/loc-street/regula.twee",
+    "game/base-system/overworld-town/loc-sensory_deprivation/main.twee"
+  ],
+  "imgFileList": [
+    "img/clothes/hands/regula/right.png",
+    "img/clothes/hands/regula/left_cover_acc.png",
+    "img/misc/icon/clothes/regula.png",
+    "img/clothes/hands/regula/full.png",
+    "img/clothes/hands/regula/left.png",
+    "img/clothes/hands/regula/right_cover_acc.png",
+    "img/clothes/hands/regula/-full.png",
+    "img/clothes/hands/regula/left_cover.png",
+    "img/clothes/hands/regula/right_acc.png",
+    "img/clothes/hands/regula/left_acc.png",
+    "img/clothes/hands/regula/right_cover.png",
+    "img/clothes/hands/regula/-acc.png"
+  ],
+  "additionFile": [
+    "item/regula.json"
+  ],
+  "addonPlugin": [
+    {
+      "modName": "TweeReplacer",
+      "addonName": "TweeReplacerAddon",
+      "modVersion": "1.0.0",
+      "params": [
+        {
+          "passage": "Trash",
+          "findString": "\t\t\t\t<<link [[试试这扇门 (0:05)|Trash Gate Leave]]>><<pass 5>><</link>>\n\t\t\t\t<br>\n\t\t\t<</if>>\n\t\t<</if>>",
+          "replace": "\t\t\t\t<<link [[试试这扇门 (0:05)|Trash Gate Leave]]>><<pass 5>><</link>>\n\t\t\t\t<br>\n\t\t\t<</if>>\n\t\t<</if>>\n\t\t<<link [[一个奇怪的洞 (0:05)|sensory deprivation]]>><<pass 5>><</link>>\n\t\t<br>"
+        }
+      ]
+    },
+    {
+      "modName": "ReplacePatcher",
+      "addonName": "ReplacePatcherAddon",
+      "modVersion": "1.0.0",
+      "params": {
+        "js": []
+      }
+    },
+    {
+      "modName": "ModdedClothesAddon",
+      "addonName": "ModdedClothesAddon",
+      "modVersion": "^1.1.0",
+      "params": {
+        "clothes": [
+          {
+            "key": "hands",
+            "filePath": "item/regula.json"
+          }
+        ]
+      }
+    },
+    {
+      "modName": "ModLoader DoL ImageLoaderHook",
+      "addonName": "ImageLoaderAddon",
+      "modVersion": "^2.3.0",
+      "params": []
+    }
+  ],
+  "dependenceInfo": [
+    {
+      "modName": "ModdedClothesAddon",
+      "version": "^1.1.0"
+    },
+    {
+      "modName": "ModLoader DoL ImageLoaderHook",
+      "version": "^2.3.0"
+    }
+  ]
+}
