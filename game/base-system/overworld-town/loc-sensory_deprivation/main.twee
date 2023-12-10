@@ -99,6 +99,11 @@
 :: sensory deprivation end
 <<set $outside to 1>><<set $location to "sensory_deprivation_cave">><<effects>> <!-- 结局-->
 
+<<impregnateParasite "tentacle" true "anus">>
+<<impregnateParasite "tentacle" true "vagina">>
+<<bodyliquid "anus" "semen" 5>>
+<<bodyliquid "vagina" "semen" 5>>
+
 （感官遮蔽解除）
 <br><br>
 突然，积攒已久的快感冲击着你的身体，你抑制不住的喘了出来。<<orgasm>><<arousal 10000>>
@@ -199,23 +204,39 @@
         <<if $player.gender is "m">>
             <span class="grey">（触手缠绕在你的腰部，将你的身子完全固定住。越来越多的触手从洞穴的侧壁中冒出，饥渴的盯着受困的“猎物”，盘算着怎么利用这来之不易的资源，</span>
             <br>
+            <<if playerChastity()>>
+                <span class="pink">触手们发现了你戴在私处的<<genitals>>。便用一种奇怪的粉色粘液裹住了你的<<genitals>>，你的<<genitals>>很快就被融化了。</span>
+                <br>
+                <<set $worn.genitals.integrity -= 5000>>
+            <</if>>
             <span class="grey">两根坚韧的触手牢牢抓住了你的脚，使你的腿完全分开，你的<<penis>>完全暴露在了空气中。一根粗壮的触手在你的<<bottom>>间不断的摩擦。另一根触手顺着肌肤攀上了你的<<breasts>>。</span>
             <br>
             <span class="grey">看来，你的肉体马上要变成它们繁殖用的工具了。）</span>
         <<elseif $player.gender is "f">>
             <span class="grey">（触手缠绕在你的腰部，将你的身子完全固定住。越来越多的触手从洞穴的侧壁中冒出，饥渴的盯着受困的“猎物”，盘算着怎么利用这来之不易的资源，</span>
             <br>
+            <<if playerChastity()>>
+                <span class="pink">触手们发现了你戴在私处的<<genitals>>。便用一种奇怪的粉色粘液裹住了你的<<genitals>>，你的<<genitals>>很快就被融化了。</span>
+                <br>
+                <<set $worn.genitals.integrity -= 5000>>
+            <</if>>
             <span class="grey">两根坚韧的触手牢牢抓住了你的脚，使你的腿完全分开，你的<<pussy>>完全暴露在了空气中。一根粗壮的触手在你的<<bottom>>间不断的摩擦。另一根触手顺着肌肤攀上了你的<<breasts>>。</span>
             <br>
             <span class="grey">看来，你的肉体马上要变成它们繁殖用的工具了。）</span>
         <<elseif $player.penisExist and $player.vaginaExist>>
             <span class="grey">（触手缠绕在你的腰部，将你的身子完全固定住。越来越多的触手从洞穴的侧壁中冒出，饥渴的盯着受困的“猎物”，盘算着怎么利用这来之不易的资源，</span>
             <br>
+            <<if playerChastity()>>
+                <span class="pink">触手们发现了你戴在私处的<<genitals>>。便用一种奇怪的粉色粘液裹住了你的<<genitals>>，你的<<genitals>>很快就被融化了。</span>
+                <br>
+                <<set $worn.genitals.integrity -= 5000>>
+            <</if>>
             <span class="grey">两根坚韧的触手牢牢抓住了你的脚，使你的腿完全分开，你的<<penis>>和<<pussy>>完全暴露在了空气中。一根粗壮的触手在你的<<bottom>>间不断的摩擦。另一根触手顺着肌肤攀上了你的<<breasts>>。</span>
             <br>
             <span class="grey">看来，你的肉体马上要变成它们繁殖用的工具了。）</span>
         <</if>>
     <<elseif $course is 3>>
+
         <<set $tentaclerapestat += 1>>
         <<if $player.gender is "m">>
             <span class="grey">（一根柔软的，形似飞机杯一样的触手，套住了你的<<penis>>上下撸动，时不时刺激下你敏感的龟头。半透明的液珠在你的尿道口凝聚，一根细小的触手为了收集繁殖用的种子，揉了揉你的尿道口后，猛得插了进去，防止你过早的射精。</span>
